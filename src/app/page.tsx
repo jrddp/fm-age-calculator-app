@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="relative flex flex-col items-center justify-center p-8 py-12 min-h-dvh">
+    <div className="relative flex flex-col items-center justify-center p-8 pb-12 min-h-dvh">
       <main className="flex flex-col items-center justify-center w-full max-w-2xl gap-6 p-12 bg-white rounded-xl rounded-br-[100px]">
         <form className="flex w-full gap-6 text-muted">
           <div className="flex flex-col gap-1">
@@ -8,7 +8,7 @@ export default function Home() {
               Day
             </label>{" "}
             <input
-              className="w-32 px-4 py-3 text-3xl border rounded-md placeholder:text-muted border-light-gray placeholder:font-bold"
+              className="w-32 px-4 py-3 text-3xl border rounded-md placeholder:text-muted border-light-gray placeholder:font-bold caret-primary outline-primary font-bold text-foreground"
               id="day"
               name="day"
               placeholder="DD"
@@ -19,7 +19,7 @@ export default function Home() {
               Month
             </label>{" "}
             <input
-              className="w-32 px-4 py-3 text-3xl border rounded-md placeholder:text-muted border-light-gray placeholder:font-bold"
+              className="w-32 px-4 py-3 text-3xl border rounded-md placeholder:text-muted border-light-gray placeholder:font-bold caret-primary outline-primary font-bold text-foreground"
               id="month"
               name="month"
               placeholder="MM"
@@ -30,7 +30,7 @@ export default function Home() {
               Year
             </label>{" "}
             <input
-              className="w-32 px-4 py-3 text-3xl border rounded-md placeholder:text-muted border-light-gray placeholder:font-bold"
+              className="w-32 px-4 py-3 text-3xl border rounded-md placeholder:text-muted border-light-gray placeholder:font-bold caret-primary outline-primary font-bold text-foreground"
               id="year"
               name="year"
               placeholder="YYYY"
@@ -38,7 +38,7 @@ export default function Home() {
           </div>
         </form>
         <div className="bg-light-gray w-full h-0.5 relative">
-          <div className="flex items-center justify-center p-4 rounded-full size-16 bg-primary right-0 -translate-y-1/2 absolute">
+          <button className="absolute right-0 flex items-center justify-center p-4 -translate-y-1/2 rounded-full size-16 bg-primary hover:bg-foreground transition-colors">
             <svg
               className="size-full"
               xmlns="http://www.w3.org/2000/svg"
@@ -50,9 +50,9 @@ export default function Home() {
                 <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
               </g>
             </svg>
-          </div>
+          </button>
         </div>
-        <div className="flex flex-col w-full pt-4 text-6xl italic font-extrabold gap-2">
+        <div className="flex flex-col w-full gap-2 pt-4 text-6xl italic font-extrabold">
           <div>
             <span className="text-primary">- -</span> years
           </div>
