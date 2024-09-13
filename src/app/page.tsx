@@ -56,11 +56,11 @@ export default function Home() {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center p-8 pb-12 min-h-dvh">
-      <main className="flex flex-col items-center justify-center w-full max-w-2xl gap-6 p-12 bg-white rounded-xl rounded-br-[100px]">
+    <div className="relative flex flex-col items-center justify-center px-4 pt-8 pb-12 min-h-dvh">
+      <main className="flex flex-col items-center justify-center w-full max-w-2xl gap-6 py-12 px-4 sm:p-12 bg-white rounded-xl rounded-br-[100px]">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex w-full gap-6 text-muted"
+          className="flex w-full gap-4 sm:gap-6 text-muted"
           onKeyDown={e => {
             if (e.key === "Enter") handleSubmit(onSubmit)();
           }}
@@ -74,7 +74,7 @@ export default function Home() {
             </label>{" "}
             <input
               {...register("day")}
-              className={`w-32 px-4 py-3 text-3xl font-bold border rounded-md placeholder:text-muted placeholder:font-bold caret-primary outline-primary text-foreground ${
+              className={`w-[5.5rem] sm:w-32 px-4 py-2.5 sm:py-3 text-xl sm:text-3xl font-bold border rounded-md placeholder:text-muted placeholder:font-bold caret-primary outline-primary text-foreground ${
                 errors.day ? "border-error" : "border-light-gray"
               }`}
               id="day"
@@ -96,7 +96,7 @@ export default function Home() {
             </label>{" "}
             <input
               {...register("month")}
-              className={`w-32 px-4 py-3 text-3xl font-bold border rounded-md placeholder:text-muted placeholder:font-bold caret-primary outline-primary text-foreground ${
+              className={`w-[5.5rem] sm:w-32 px-4 py-2.5 sm:py-3 text-xl sm:text-3xl font-bold border rounded-md placeholder:text-muted placeholder:font-bold caret-primary outline-primary text-foreground ${
                 errors.month ? "border-error" : "border-light-gray"
               }`}
               id="month"
@@ -118,7 +118,7 @@ export default function Home() {
             </label>{" "}
             <input
               {...register("year")}
-              className={`w-32 px-4 py-3 text-3xl font-bold border rounded-md placeholder:text-muted placeholder:font-bold caret-primary outline-primary text-foreground ${
+              className={`w-[5.5rem] sm:w-32 px-4 py-2.5 sm:py-3 text-xl sm:text-3xl font-bold border rounded-md placeholder:text-muted placeholder:font-bold caret-primary outline-primary text-foreground ${
                 errors.year ? "border-error" : "border-light-gray"
               }`}
               id="year"
@@ -130,9 +130,9 @@ export default function Home() {
             </div>
           </div>
         </form>
-        <div className="bg-light-gray w-full h-0.5 relative">
+        <div className="bg-light-gray w-full h-0.5 relative flex justify-center my-4 sm:my-0">
           <button
-            className="absolute right-0 flex items-center justify-center p-4 transition-colors -translate-y-1/2 rounded-full size-16 bg-primary hover:bg-foreground"
+            className="sm:absolute right-0 flex items-center justify-center p-4 transition-colors -translate-y-1/2 rounded-full size-16 bg-primary hover:bg-foreground"
             onClick={() => handleSubmit(onSubmit)()}
           >
             <svg
@@ -148,7 +148,7 @@ export default function Home() {
             </svg>
           </button>
         </div>
-        <div className="flex flex-col w-full gap-2 pt-4 text-6xl italic font-extrabold">
+        <div className="flex flex-col w-full gap-2 pt-4 text-5xl sm:text-6xl italic font-extrabold">
           <div>
             <span className="text-primary">{age ? age.years : "- -"}</span> years
           </div>
@@ -161,7 +161,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="absolute flex gap-1 text-sm bottom-4">
+      <footer className="absolute flex gap-1 text-sm bottom-4 sm:flex-row flex-col items-center">
         <div>
           Challenge by{" "}
           <a
