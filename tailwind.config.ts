@@ -15,6 +15,7 @@ const config: Config = {
         muted: "hsl(0, 1%, 44%)",
         foreground: "hsl(0, 0%, 8%)",
         primary: "#864CFF",
+        error: "#F87171", // red-400
       },
     },
   },
